@@ -8,5 +8,6 @@ var list1 = [
 ];
 
 const findAdmin = (list, lang) => list.filter(v=>v.language===lang&&v.githubAdmin==='yes');
+const findAdmin = (list, lang) => list.filter(({language, githubAdmin}) => language === lang && githubAdmin === 'yes');
 
 findAdmin(list1, 'Javascript');
